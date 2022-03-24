@@ -1,12 +1,43 @@
 # Schema
 
-- Users
+User
+- email (unique, used for login)
+- password
 
-- Study Groups
+UserProfile
+- user_id
+- first_name
+- last_name
+- image
+- fb_profile
+- twitter_profile
+- linkedin_profile
+- website
 
-- Posts
+StudyGroups
+- study_group_id 
+- name
+- description
 
-- Roles
-  - Admin
-  - Student
-  - External
+Posts
+- user_id (ForeignKey)
+- name
+- created_at
+- updated_at  
+
+Roles
+- Admin
+- Student
+- External
+
+# API
+
+/users
+- GET
+- POST
+
+/users/:id
+- GET
+- DELETE
+
+/
